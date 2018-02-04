@@ -4,7 +4,7 @@ An implementation of declarable, reusable components for building UIs in Emacs.
 
 I use this for my own toy projects and stuff in my personal config. YMMV.
 
-Here's an extended example that define a UI component for displaying data that's
+Here's an extended example that defines a UI component for displaying data that's
 loaded asynchronously.
 
 ``` emacs-lisp
