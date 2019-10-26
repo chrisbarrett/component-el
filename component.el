@@ -28,6 +28,7 @@
 
 ;;; Code:
 
+(require 'eieio)
 (require 'cl-lib)
 (require 'magit)
 (require 'subr-x)
@@ -116,7 +117,7 @@ such in component ASTs." name)))
     (insert ?\n))
 
   ;; Update containing section to point to this heading.
-  (setf (magit-section-content magit-insert-section--current) (point-marker)))
+  (oset magit-insert-section--current content (point-marker)))
 
 (defsubst component--finalize-list-item (start-pos)
   (save-excursion
