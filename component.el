@@ -159,6 +159,10 @@ such in component ASTs." name)))
         ;; Padding gets some special error checking to make sure it has no inner
         ;; AST, since I get `padding' and `indent' mixed up all the time.
 
+        (`(image ,inner-image)
+          (insert-image inner-image)
+          (!cdr instruction-stack))
+
         ((and `(padding . ,_rest) (guard _rest))
          (error "Padding takes no arguments"))
         (`(padding)
